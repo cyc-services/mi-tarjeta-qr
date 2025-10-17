@@ -7,7 +7,6 @@
     <!-- vCard actualizada con perfiles sociales y sin email -->
     <meta http-equiv="refresh" content="0; url=data:text/vcard;charset=utf-8,BEGIN%3AVCARD%0AVERSION%3A3.0%0AFN%3APablo%20C.%20Casta%C3%B1eda%20Camacho%0AN%3ACasta%C3%B1eda%20Camacho%3BPablo%20C.%3B%3B%3B%0AORG%3AC%26C%20Services%20S.A.S.%0ATITLE%3ACEO%0ATEL%3BWORK%3BVOICE%3A%2B573133482755%0AURL%3Ahttps%3A%2F%2Fwww.cyc-bpo.com%0AX-SOCIALPROFILE%3Btype%3Dinstagram%3Ahttps%3A%2F%2Fwww.instagram.com%2Fcycservices.sas%2F%0AX-SOCIALPROFILE%3Btype%3Dlinkedin%3Ahttps%3A%2F%2Fwww.linkedin.com%2Fin%2Fcyc-services-3b4485244%2F%0ANOTE%3ABPO%20especializado%20en%20gesti%C3%B3n%20de%20cartera%20y%20soluciones%20contact%20center.%0AEND%3AVCARD">
     
-    <!-- CORRECCIÓN: Se unen las dos fuentes en un solo enlace para mejorar la carga -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Material+Icons&display=swap" rel="stylesheet">
@@ -22,15 +21,15 @@
             min-height: 100vh;
             background-color: #f0f2f5;
             box-sizing: border-box;
-            padding: 20px;
-            -webkit-font-smoothing: antialiased; /* Mejora renderizado de fuentes */
+            padding: 20px 10px; /* Menos padding lateral para móviles */
+            -webkit-font-smoothing: antialiased;
         }
         .card-container {
             background-color: white;
-            border-radius: 20px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            border-radius: 24px; /* Un poco más redondeado */
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
             width: 100%;
-            max-width: 400px;
+            max-width: 380px; /* Un poco más estrecho */
             overflow: hidden;
             margin-top: 20px;
         }
@@ -40,28 +39,27 @@
             text-align: center;
             position: relative;
             color: white;
-            border-bottom-left-radius: 100% 20px;
-            border-bottom-right-radius: 100% 20px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            border-bottom-left-radius: 100% 25px;
+            border-bottom-right-radius: 100% 25px;
         }
         .profile-logo {
-            width: 100px;
-            height: 100px;
-            background-color: #e0e0e0; /* Color de fondo mientras carga la imagen */
+            width: 110px;
+            height: 110px;
+            background-color: #e0e0e0;
             border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
             margin: 0 auto 15px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
             overflow: hidden;
-            border: 3px solid white;
+            border: 4px solid white;
         }
         .profile-logo img {
             width: 100%;
             height: 100%;
             display: block;
-            object-fit: cover; /* Asegura que la imagen cubra el círculo sin deformarse */
+            object-fit: cover;
         }
         .name {
             font-size: 1.6em;
@@ -81,8 +79,8 @@
             color: #8e9eec;
             background-color: #ffffff;
             border-radius: 50%;
-            width: 40px;
-            height: 40px;
+            width: 44px;
+            height: 44px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -94,29 +92,28 @@
         }
         .description {
             font-size: 1em;
-            color: #666;
+            color: #555;
             margin-bottom: 30px;
             line-height: 1.5;
         }
         .contact-details {
             background-color: #f8f9fa;
             border-radius: 15px;
-            padding: 15px;
+            padding: 10px;
             text-align: left;
             margin-bottom: 30px;
-            box-shadow: inset 0 2px 5px rgba(0,0,0,0.05);
         }
         .detail-item {
             display: flex;
             align-items: center;
-            padding: 10px 5px;
+            padding: 12px 10px;
             color: #333;
         }
         .detail-item:not(:last-child) {
             border-bottom: 1px solid #e9ecef;
         }
         .detail-icon {
-            font-size: 24px; /* Tamaño fijo para todos los iconos */
+            font-size: 24px;
             color: #8e9eec;
             margin-right: 15px;
             width: 25px;
@@ -128,15 +125,17 @@
         }
         .detail-text strong {
             display: block;
-            font-size: 0.8em;
+            font-size: 0.75em;
             color: #888;
             font-weight: 500;
             text-transform: uppercase;
+            margin-bottom: 2px;
         }
         .detail-text a {
             color: #333;
             text-decoration: none;
             font-weight: 500;
+            word-break: break-all; /* Evita desbordamiento de enlaces largos */
         }
         .detail-text a:hover {
             text-decoration: underline;
@@ -144,7 +143,7 @@
         .add-contact-button {
             background: #8e9eec;
             color: white;
-            padding: 15px 25px;
+            padding: 15px 20px;
             border: none;
             border-radius: 30px;
             font-size: 1.1em;
@@ -154,8 +153,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 100%;
-            max-width: 300px;
+            width: 100%; /* CORRECCIÓN: El botón ocupa el 100% del contenedor */
+            box-sizing: border-box; /* CORRECCIÓN: Asegura que el padding no cause desbordamiento */
             margin: 0 auto;
             text-decoration: none;
             box-shadow: 0 4px 15px rgba(142, 158, 236, 0.4);
@@ -173,8 +172,8 @@
     <div class="card-container">
         <div class="header-bg">
             <div class="profile-logo">
-                <!-- CORRECCIÓN FINAL: URL de la imagen en tu repositorio -->
-                <img src="https://raw.githubusercontent.com/tattamnor-web/mi-tarjeta-qr/main/1eed5f59-585b-467a-8fef-d4fa3e03d858.jpg" alt="Foto de Pablo Castañeda">
+                <!-- CORRECCIÓN FINAL: URL de la nueva imagen pablo.jpg -->
+                <img src="https://raw.githubusercontent.com/tattamnor-web/mi-tarjeta-qr/main/pablo.jpg" alt="Foto de Pablo Castañeda">
             </div>
             <div class="name">Pablo C. Castañeda Camacho</div>
             <div class="title">CEO</div>
